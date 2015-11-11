@@ -14,7 +14,8 @@ masses = [b.m for b in bs]
 ns, bins, _ = plt.hist(masses, 60, histtype='stepfilled', facecolor='r',
                        edgecolor='none')
 centers = bins[:-1] + (bins[1:] - bins[:-1]) / 2
+widths = (bins[1:] - bins[:-1]) / 2
 merr = np.sqrt(ns)
-plt.errorbar(centers, ns, yerr=merr, fmt='b+')
+plt.errorbar(centers, ns, yerr=merr, xerr=widths, fmt='b+')
 plt.xlabel(r'$m_B / \mathrm{GeV}$')
 plt.savefig('mass.pdf')
