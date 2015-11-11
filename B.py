@@ -14,5 +14,6 @@ with open('B.txt') as f:
 
 masses = [b.m for b in bs]
 
-plt.hist(masses, 100)
+plt.hist(masses, 60, histtype='stepfilled')
+plt.xlabel(r'$m_B / \mathrm{GeV}$')
 plt.savefig('mass.pdf')
