@@ -95,7 +95,8 @@ DaVinci().EvtMax = -1
 DaVinci().CondDBtag = 'sim-20130522-1-vc-md100'
 DaVinci().DDDBtag = 'dddb-20130929-1'
 
-# Use the local input data
-IOHelper().inputFiles([
-    './00035742_00000001_1.allstreams.dst'
-], clear=True)
+# Ignore this while testing ganga
+# # Use the local input data
+# IOHelper().inputFiles([
+#     './00035742_00000001_1.allstreams.dst'
+# ], clear=True)
