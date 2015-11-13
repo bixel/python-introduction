@@ -72,6 +72,16 @@ dtt.Dstar.ConsD.constrainToOriginVertex = True
 dtt.Dstar.ConsD.Verbose = True
 dtt.Dstar.ConsD.daughtersToConstrain = ['D0']
 
+dtt.Dstar.addTupleTool('TupleToolDecayTreeFitter/ConsDpipi')
+dtt.Dstar.ConsDpipi.constrainToOriginVertex = True
+dtt.Dstar.ConsDpipi.Verbose = True
+dtt.Dstar.ConsDpipi.daughtersToConstrain = ['D0']
+
+dtt.Dstar.ConsDpipi.Substitutions = {
+    'Charm -> (D0 -> ^K- pi+) Meson': 'pi-',
+    'Charm -> (D~0 -> ^K+ pi-) Meson': 'pi+'
+}
+
 # Configure DaVinci
 DaVinci().UserAlgorithms += [dtt]
 DaVinci().InputType = 'DST'
