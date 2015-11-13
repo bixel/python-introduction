@@ -10,11 +10,11 @@ IOHelper('ROOT').inputFiles(input_files)
 dv = DaVinci()
 dv.DataType = '2012'
 
-app_mgr = GP.AppMgr()
-evt_svc = app_mgr.evtsvc()
+appMgr = GP.AppMgr()
+evt = appMgr.evtsvc()
 
-app_mgr.run(1)
-evt_svc.dump()
+appMgr.run(1)
+evt.dump()
 
 def nodes(evt, node=None):
     """List all nodes in `evt`"""
